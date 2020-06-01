@@ -1,7 +1,7 @@
 package com.Gamestalk.springnggamestalk.service;
 
 import com.Gamestalk.springnggamestalk.dto.RegisterRequest;
-import com.Gamestalk.springnggamestalk.exception.SpringRedditException;
+import com.Gamestalk.springnggamestalk.exception.SpringGamestalkException;
 import com.Gamestalk.springnggamestalk.model.NotificationEmail;
 import com.Gamestalk.springnggamestalk.model.User;
 import com.Gamestalk.springnggamestalk.model.VerificationToken;
@@ -56,13 +56,13 @@ public class AuthService {
     }
     public void verifyAccount(String token) {
         Optional<VerificationToken> verificationTokenOptional = verificationTokenRepository.findByToken(token);
-        verificationTokenOptional.orElseThrow(() -> new SpringRedditException("Invalid Token"));
+        verificationTokenOptional.orElseThrow(() -> new SpringGamestalkException("Invalid Token"));
         fetchUserAndEnable(verificationTokenOptional.get());
     }
     @Transactional
     private void fetchUserAndEnable(VerificationToken verificationToken) {
         String username = verificationToken.getUser().getUsername();
-        User user = userRepository.findByUsername(username).orElseThrow(() -> new SpringRedditException("User Not Found with id - " + username));
+        User user = userRepository.findByUsername(username).orElseThrow(() -> new SpringGamestalkException("User Not Found with id - " + username));
         user.setEnabled(true);
         userRepository.save(user);
     }

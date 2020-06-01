@@ -1,6 +1,6 @@
 package com.Gamestalk.springnggamestalk.service;
 
-import com.Gamestalk.springnggamestalk.exception.SpringRedditException;
+import com.Gamestalk.springnggamestalk.exception.SpringGamestalkException;
 import com.Gamestalk.springnggamestalk.model.NotificationEmail;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -32,7 +32,7 @@ class MailService {
             mailSender.send(messagePreparator);
             log.info("Activation email sent!!");
         } catch (MailException e) {
-            throw new SpringRedditException("Exception occurred when sending mail to " + notificationEmail.getRecipient());
+            throw new SpringGamestalkException("Exception occurred when sending mail to " + notificationEmail.getRecipient());
         }
     }
 
