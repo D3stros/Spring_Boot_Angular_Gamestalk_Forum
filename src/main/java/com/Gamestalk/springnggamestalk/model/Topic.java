@@ -17,7 +17,7 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @NoArgsConstructor
 @Entity
 @Builder
-public class Subreddit {
+public class Topic {
     @Id
     @GeneratedValue(strategy = SEQUENCE)
     private Long id;
