@@ -9,18 +9,16 @@ import com.Gamestalk.springnggamestalk.model.User;
 import com.Gamestalk.springnggamestalk.model.VerificationToken;
 import com.Gamestalk.springnggamestalk.repository.UserRepository;
 import com.Gamestalk.springnggamestalk.repository.VerificationTokenRepository;
+import com.Gamestalk.springnggamestalk.security.JwtProvider;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.stereotype.Service;
 
-import javax.management.remote.JMXAuthenticator;
 import javax.transaction.Transactional;
 
 import java.util.Optional;
