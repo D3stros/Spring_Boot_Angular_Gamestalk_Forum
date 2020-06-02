@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.security.*;
 import java.security.cert.CertificateException;
-
 @Service
 public class JwtProvider {
     private KeyStore keyStore;
@@ -18,7 +17,7 @@ public class JwtProvider {
     public void init() {
         try {
             keyStore = KeyStore.getInstance("JKS");
-            InputStream resourceAsStream = getClass().getResourceAsStream("/springblog.jks");
+            InputStream resourceAsStream = getClass().getResourceAsStream("/gamestalk.jks");
             keyStore.load(resourceAsStream, "secret".toCharArray());
         } catch (KeyStoreException | CertificateException | NoSuchAlgorithmException | IOException e) {
             throw new SpringGamestalkException("Exception occurred while loading keystore");
@@ -33,7 +32,7 @@ public class JwtProvider {
     }
     private PrivateKey getPrivateKey() {
         try {
-            return (PrivateKey) keyStore.getKey("springblog", "secret".toCharArray());
+            return (PrivateKey) keyStore.getKey("gamestalk", "secret".toCharArray());
         } catch (KeyStoreException | NoSuchAlgorithmException | UnrecoverableKeyException e) {
             throw new SpringGamestalkException("Exception occured while retrieving public key from keystore");
         }
