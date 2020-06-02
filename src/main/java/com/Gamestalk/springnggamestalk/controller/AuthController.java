@@ -1,5 +1,7 @@
 package com.Gamestalk.springnggamestalk.controller;
 
+import com.Gamestalk.springnggamestalk.dto.AuthenticationResponse;
+import com.Gamestalk.springnggamestalk.dto.LoginRequest;
 import com.Gamestalk.springnggamestalk.dto.RegisterRequest;
 import com.Gamestalk.springnggamestalk.service.AuthService;
 import lombok.AllArgsConstructor;
@@ -19,6 +21,11 @@ public class AuthController {
     public ResponseEntity signup(@RequestBody RegisterRequest registerRequest) {
         authService.signup(registerRequest);
         return new ResponseEntity("User registration succesful", OK);
+    }
+
+    @PostMapping("/login")
+    public AuthenticationResponse login(@RequestBody LoginRequest loginRequest) {
+        return authService.login(loginRequest);
     }
 
     @GetMapping("accountVerification/{token}")

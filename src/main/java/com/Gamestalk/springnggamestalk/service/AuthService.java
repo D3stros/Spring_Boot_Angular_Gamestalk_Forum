@@ -1,5 +1,7 @@
 package com.Gamestalk.springnggamestalk.service;
 
+import com.Gamestalk.springnggamestalk.dto.AuthenticationResponse;
+import com.Gamestalk.springnggamestalk.dto.LoginRequest;
 import com.Gamestalk.springnggamestalk.dto.RegisterRequest;
 import com.Gamestalk.springnggamestalk.exception.SpringGamestalkException;
 import com.Gamestalk.springnggamestalk.model.NotificationEmail;
@@ -9,9 +11,16 @@ import com.Gamestalk.springnggamestalk.repository.UserRepository;
 import com.Gamestalk.springnggamestalk.repository.VerificationTokenRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.stereotype.Service;
 
+import javax.management.remote.JMXAuthenticator;
 import javax.transaction.Transactional;
 
 import java.util.Optional;
@@ -29,6 +38,9 @@ public class AuthService {
     private final VerificationTokenRepository verificationTokenRepository;
     private final MailContentBuilder mailContentBuilder;
     private final MailService mailService;
+    private AuthenticationManager authenticationManager;
+    private JwtProvider jwtProvider;
+
     @Transactional
     public void signup(RegisterRequest registerRequest) {
         User user = new User();
@@ -54,6 +66,15 @@ public class AuthService {
     private String encodePassword(String password) {
         return passwordEncoder.encode(password);
     }
+
+    public AuthenticationResponse login(LoginRequest loginRequest) {
+        Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsername(),
+                loginRequest.getPassword()));
+        SecurityContextHolder.getContext().setAuthentication(authenticate);
+        String authenticationToken = jwtProvider.generateToken(authenticate);
+        return new AuthenticationResponse(authenticationToken, loginRequest.getUsername());
+    }
+
     public void verifyAccount(String token) {
         Optional<VerificationToken> verificationTokenOptional = verificationTokenRepository.findByToken(token);
         verificationTokenOptional.orElseThrow(() -> new SpringGamestalkException("Invalid Token"));
