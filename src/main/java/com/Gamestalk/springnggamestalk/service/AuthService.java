@@ -16,10 +16,10 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -53,6 +53,23 @@ public class AuthService {
                 + ACTIVATION_EMAIL + "/" + token);
         mailService.sendMail(new NotificationEmail("Please Activate your account", user.getEmail(), message));
     }
+
+    @Transactional(readOnly = true)
+    User getCurrentUser() {
+        org.springframework.security.core.userdetails.User principal = (org.springframework.security.core.userdetails.User) SecurityContextHolder.
+                getContext().getAuthentication().getPrincipal();
+        return userRepository.findByUsername(principal.getUsername())
+                .orElseThrow(() -> new UsernameNotFoundException("User name not found - " + principal.getUsername()));
+    }
+
+    @Transactional
+    private void fetchUserAndEnable(VerificationToken verificationToken) {
+        String username = verificationToken.getUser().getUsername();
+        User user = userRepository.findByUsername(username).orElseThrow(() -> new SpringGamestalkException("User Not Found with id - " + username));
+        user.setEnabled(true);
+        userRepository.save(user);
+    }
+
     private String generateVerificationToken(User user) {
         String token = UUID.randomUUID().toString();
         VerificationToken verificationToken = new VerificationToken();
@@ -61,9 +78,13 @@ public class AuthService {
         verificationTokenRepository.save(verificationToken);
         return token;
     }
-    private String encodePassword(String password) {
-        return passwordEncoder.encode(password);
+
+    public void verifyAccount(String token) {
+        Optional<VerificationToken> verificationTokenOptional = verificationTokenRepository.findByToken(token);
+        verificationTokenOptional.orElseThrow(() -> new SpringGamestalkException("Invalid Token"));
+        fetchUserAndEnable(verificationTokenOptional.get());
     }
+
 
     public AuthenticationResponse login(LoginRequest loginRequest) {
         Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsername(),
@@ -73,16 +94,8 @@ public class AuthService {
         return new AuthenticationResponse(authenticationToken, loginRequest.getUsername());
     }
 
-    public void verifyAccount(String token) {
-        Optional<VerificationToken> verificationTokenOptional = verificationTokenRepository.findByToken(token);
-        verificationTokenOptional.orElseThrow(() -> new SpringGamestalkException("Invalid Token"));
-        fetchUserAndEnable(verificationTokenOptional.get());
+    private String encodePassword(String password) {
+        return passwordEncoder.encode(password);
     }
-    @Transactional
-    private void fetchUserAndEnable(VerificationToken verificationToken) {
-        String username = verificationToken.getUser().getUsername();
-        User user = userRepository.findByUsername(username).orElseThrow(() -> new SpringGamestalkException("User Not Found with id - " + username));
-        user.setEnabled(true);
-        userRepository.save(user);
-    }
+
 }
