@@ -1,18 +1,26 @@
 package com.Gamestalk.springnggamestalk.security;
 
 import com.Gamestalk.springnggamestalk.exception.SpringGamestalkException;
+
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
+
 import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.*;
 import java.security.cert.CertificateException;
+
+import static io.jsonwebtoken.Jwts.parser;
+
 @Service
 public class JwtProvider {
+
     private KeyStore keyStore;
+
     @PostConstruct
     public void init() {
         try {
@@ -22,7 +30,9 @@ public class JwtProvider {
         } catch (KeyStoreException | CertificateException | NoSuchAlgorithmException | IOException e) {
             throw new SpringGamestalkException("Exception occurred while loading keystore");
         }
+
     }
+
     public String generateToken(Authentication authentication) {
         org.springframework.security.core.userdetails.User principal = (User) authentication.getPrincipal();
         return Jwts.builder()
@@ -30,11 +40,34 @@ public class JwtProvider {
                 .signWith(getPrivateKey())
                 .compact();
     }
+
     private PrivateKey getPrivateKey() {
         try {
             return (PrivateKey) keyStore.getKey("gamestalk", "secret".toCharArray());
         } catch (KeyStoreException | NoSuchAlgorithmException | UnrecoverableKeyException e) {
             throw new SpringGamestalkException("Exception occured while retrieving public key from keystore");
         }
+    }
+
+    public boolean validateToken(String jwt) {
+        parser().setSigningKey(getPublickey()).parseClaimsJws(jwt);
+        return true;
+    }
+
+    private PublicKey getPublickey() {
+        try {
+            return keyStore.getCertificate("gamestalk").getPublicKey();
+        } catch (KeyStoreException e) {
+            throw new SpringGamestalkException("Exception occured while retrieving public key from keystore");
+        }
+    }
+
+    public String getUsernameFromJWT(String token) {
+        Claims claims = parser()
+                .setSigningKey(getPublickey())
+                .parseClaimsJws(token)
+                .getBody();
+
+        return claims.getSubject();
     }
 }
