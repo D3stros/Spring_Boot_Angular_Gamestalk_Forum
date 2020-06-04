@@ -45,7 +45,7 @@ public class TopicService {
     private TopicDto mapToDto(Topic topic) {
         return TopicDto.builder().name(topic.getName())
                 .id(topic.getId())
-                .postCount(topic.getPosts().size())
+                .numberOfPosts(topic.getPosts().size())
                 .build();
     }
 
