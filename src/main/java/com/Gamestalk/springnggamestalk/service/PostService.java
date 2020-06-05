@@ -38,7 +38,8 @@ public class PostService {
         Topic topic = topicRepository.findByName(postRequest.getTopicName())
                 .orElseThrow(() -> new TopicNotFoundException(postRequest.getTopicName()));
 
-        postRepository.save(postMapper.map(postRequest, topic, authService.getCurrentUser()));    }
+        postRepository.save(postMapper.map(postRequest, topic, authService.getCurrentUser()));
+    }
 
     @Transactional(readOnly = true)
     public PostResponse getPost(Long id) {
