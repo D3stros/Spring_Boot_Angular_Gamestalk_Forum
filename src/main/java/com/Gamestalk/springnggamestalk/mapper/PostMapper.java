@@ -13,12 +13,16 @@ public interface PostMapper {
 
 
     @Mapping(target = "createdDate", expression = "java(java.time.Instant.now())")
+    @Mapping(target = "topic", source="topic")
+    @Mapping(target = "user", source="user")
     @Mapping(target = "description", source = "postRequest.description")
-    @Mapping(target = "topic", source = "topic")
     @Mapping(target = "voteCount", constant = "0")
     Post map(PostRequest postRequest, Topic topic, User user);
 
     @Mapping(target = "id", source = "postId")
+    @Mapping(target = "postName", source = "postName")
+    @Mapping(target = "description", source = "description")
+    @Mapping(target = "url", source = "url")
     @Mapping(target = "topicName", source = "topic.name")
     @Mapping(target = "userName", source = "user.username")
     PostResponse mapToDto(Post post);
