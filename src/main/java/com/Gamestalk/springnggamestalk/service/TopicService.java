@@ -2,7 +2,6 @@ package com.Gamestalk.springnggamestalk.service;
 
 import com.Gamestalk.springnggamestalk.dto.TopicDto;
 import com.Gamestalk.springnggamestalk.exception.SpringGamestalkException;
-import com.Gamestalk.springnggamestalk.exception.TopicNotFoundException;
 import com.Gamestalk.springnggamestalk.mapper.TopicMapper;
 import com.Gamestalk.springnggamestalk.model.Topic;
 import com.Gamestalk.springnggamestalk.repository.TopicRepository;
@@ -25,8 +24,8 @@ public class TopicService {
 
     @Transactional
     public TopicDto save(TopicDto topicDto) {
-        Topic topic = topicRepository.save(topicMapper.mapDtoToTopic(topicDto));
-        topicDto.setId(topic.getId());
+        Topic save = topicRepository.save(topicMapper.mapDtoToTopic(topicDto));
+        topicDto.setId(save.getId());
         return topicDto;
     }
 

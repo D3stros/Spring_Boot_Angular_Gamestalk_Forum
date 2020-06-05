@@ -21,4 +21,4 @@ public interface TopicMapper {
 
     @InheritInverseConfiguration
     @Mapping(target = "posts", ignore = true)
-    Topic mapDtoToTopic(TopicDto topic);}
+    Topic mapDtoToTopic(TopicDto topicDto);}

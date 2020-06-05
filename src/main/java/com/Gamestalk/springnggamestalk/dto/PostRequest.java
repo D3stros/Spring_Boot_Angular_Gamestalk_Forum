@@ -1,17 +1,16 @@
 package com.Gamestalk.springnggamestalk.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class TopicDto {
-    private Long id;
-    private String name;
+public class PostRequest {
+    private Long postId;
+    private String topicName;
+    private String postName;
+    private String url;
     private String description;
-    private Integer numberOfPosts;
 }

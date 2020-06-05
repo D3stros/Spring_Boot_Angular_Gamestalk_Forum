@@ -10,7 +10,7 @@ import java.time.Instant;
 import java.util.List;
 
 import static javax.persistence.FetchType.LAZY;
-import static javax.persistence.GenerationType.SEQUENCE;
+import static javax.persistence.GenerationType.IDENTITY;
 
 @Data
 @AllArgsConstructor
@@ -19,15 +19,15 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Builder
 public class Topic {
     @Id
-    @GeneratedValue(strategy = SEQUENCE)
+    @GeneratedValue(strategy = IDENTITY)
     private Long id;
     @NotBlank(message = "Community name is required")
     private String name;
     @NotBlank(message = "Description is required")
     private String description;
-    @OneToMany(fetch = LAZY)
+    @OneToMany
     private List<Post> posts;
     private Instant createdDate;
-    @ManyToOne(fetch = LAZY)
+    @ManyToOne
     private User user;
 }

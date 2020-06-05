@@ -1,17 +1,20 @@
 package com.Gamestalk.springnggamestalk.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class TopicDto {
+public class PostResponse {
     private Long id;
-    private String name;
+    private String postName;
+    private String url;
     private String description;
-    private Integer numberOfPosts;
+    private String userName;
+    private String topicName;
+    private Integer voteCount;
+    private Integer commentCount;
+    private String duration;
 }
