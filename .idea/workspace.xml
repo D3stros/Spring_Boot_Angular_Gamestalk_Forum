@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="97cf47ff-57f1-4e73-a191-6bf2569d1a14" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/SpringNgGamestalkApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/controller/CommentsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/controller/PostController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/controller/TopicController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/controller/VoteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/dto/AuthenticationResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/dto/CommentsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/dto/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/dto/PostRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/dto/PostResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/dto/RefreshTokenRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/dto/RegisterRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/dto/TopicDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/dto/VoteDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/exception/PostNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/exception/SpringGamestalkException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/exception/TopicNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/mapper/CommentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/mapper/PostMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/mapper/TopicMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/model/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/model/NotificationEmail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/model/Post.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/model/RefreshToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/model/Topic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/model/VerificationToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/model/Vote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/model/VoteType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/repository/CommentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/repository/PostRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/repository/RefreshTokenRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/repository/TopicRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/repository/VerificationTokenRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/repository/VoteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/security/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/security/JwtProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/service/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/service/CommentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/service/MailContentBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/service/MailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/service/PostService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/service/RefreshTokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/service/TopicService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/service/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/service/VoteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Gamestalk/springnggamestalk/util/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/gamestalk.jks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mailTemplate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/Gamestalk/springnggamestalk/SpringNgGamestalkApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cxSvy7IJQzSBk1dTWaowvlZp34" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97cf47ff-57f1-4e73-a191-6bf2569d1a14" name="Default Changelist" comment="" />
+      <created>1591468985601</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591468985601</updated>
+    </task>
+    <servers />
+  </component>
+</project>
