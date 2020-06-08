@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.programming.techie</groupId>
-	<artifactId>spring-reddit-clone</artifactId>
+	<artifactId>spring-gamestalk</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-reddit-clone</name>
+	<name>spring-gamestalk</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

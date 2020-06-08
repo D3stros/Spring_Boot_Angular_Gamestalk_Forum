@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Spring_Boot_Angular_Gamestalk_Forum.iml" filepath="$PROJECT_DIR$/.idea/Spring_Boot_Angular_Gamestalk_Forum.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Backend/spring-reddit-clone.iml" filepath="$PROJECT_DIR$/Backend/spring-reddit-clone.iml" />
     </modules>
   </component>
 </project>
