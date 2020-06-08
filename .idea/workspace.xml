@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97cf47ff-57f1-4e73-a191-6bf2569d1a14" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/Gamestalk/springnggamestalk/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/Gamestalk/springnggamestalk/model/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/Gamestalk/springnggamestalk/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/Gamestalk/springnggamestalk/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591650706012</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changed Post javax persistence type to identity">
+      <created>1591650909484</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591650909484</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,7 +135,9 @@
     <MESSAGE value="Edited security config file to fix cors policy problem" />
     <MESSAGE value="Added logout request dto class" />
     <MESSAGE value="Changed javax persistence comment class to identity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed javax persistence comment class to identity" />
+    <MESSAGE value="Changed Post javax persistence type to identity" />
+    <MESSAGE value="Changed User javax persistence type to identity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed User javax persistence type to identity" />
   </component>
   <component name="WindowStateProjectService">
     <state x="655" y="70" width="628" height="899" key="#SpringNgGamestalkApplication" timestamp="1591650657966">
@@ -150,9 +160,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="266" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591650722038" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1591650708988">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1591650910756">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591650708988" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591650910756" />
   </component>
 </project>
