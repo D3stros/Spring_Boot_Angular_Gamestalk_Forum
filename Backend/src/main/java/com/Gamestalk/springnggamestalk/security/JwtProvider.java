@@ -29,7 +29,7 @@ public class JwtProvider {
             InputStream resourceAsStream = getClass().getResourceAsStream("/gamestalk.jks");
             keyStore.load(resourceAsStream, "secret".toCharArray());
         } catch (KeyStoreException | CertificateException | NoSuchAlgorithmException | IOException e) {
-            throw new SpringGamestalkException("Exception occurred while loading keystore");
+            throw new SpringGamestalkException("Exception occurred while loading keystore", e);
         }
     }
     public String generateToken(Authentication authentication) {
@@ -53,7 +53,7 @@ public class JwtProvider {
         try {
             return (PrivateKey) keyStore.getKey("gamestalk", "secret".toCharArray());
         } catch (KeyStoreException | NoSuchAlgorithmException | UnrecoverableKeyException e) {
-            throw new SpringGamestalkException("Exception occured while retrieving public key from keystore");
+            throw new SpringGamestalkException("Exception occured while retrieving public key from keystore", e);
         }
     }
     public boolean validateToken(String jwt) {
@@ -65,7 +65,7 @@ public class JwtProvider {
             return keyStore.getCertificate("gamestalk").getPublicKey();
         } catch (KeyStoreException e) {
             throw new SpringGamestalkException("Exception occured while " +
-                    "retrieving public key from keystore");
+                    "retrieving public key from keystore", e);
         }
     }
     public String getUsernameFromJwt(String token) {
