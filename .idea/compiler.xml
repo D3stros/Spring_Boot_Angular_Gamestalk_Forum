@@ -24,7 +24,6 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar" />
         </processorPath>
         <module name="spring-gamestalk-clone" />
-        <module name="spring-reddit-clone" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

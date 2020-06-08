@@ -22,7 +22,8 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },
@@ -131,9 +132,7 @@
               "projects/gamestalk/src/favicon.ico",
               "projects/gamestalk/src/assets"
             ],
-            "styles": [
-              "projects/gamestalk/src/styles.css"
-            ],
+            "styles": ["projects/gamestalk/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -195,9 +194,7 @@
               "projects/gamestalk/src/favicon.ico",
               "projects/gamestalk/src/assets"
             ],
-            "styles": [
-              "projects/gamestalk/src/styles.css"
-            ],
+            "styles": ["projects/gamestalk/src/styles.css"],
             "scripts": []
           }
         },
@@ -209,9 +206,7 @@
               "projects/gamestalk/tsconfig.spec.json",
               "projects/gamestalk/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
