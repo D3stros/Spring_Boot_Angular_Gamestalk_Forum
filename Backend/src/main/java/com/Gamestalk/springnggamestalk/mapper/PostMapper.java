@@ -14,7 +14,6 @@ import org.mapstruct.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Mapper(componentModel = "spring")
-
 public abstract class PostMapper {
 
     @Autowired
@@ -28,6 +27,7 @@ public abstract class PostMapper {
     @Mapping(target = "createdDate", expression = "java(java.time.Instant.now())")
     @Mapping(target = "description", source = "postRequest.description")
     @Mapping(target = "topic", source = "topic")
+    @Mapping(target = "user", source = "user")
     @Mapping(target = "voteCount", constant = "0")
     public abstract Post map(PostRequest postRequest, Topic topic, User user);
 
