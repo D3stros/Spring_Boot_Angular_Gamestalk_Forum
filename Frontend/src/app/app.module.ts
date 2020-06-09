@@ -15,6 +15,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { TokenInterceptor } from './token-interceptor';
 import { HomeComponent } from './home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PostTileComponent } from './auth/shared/post-tile/post-tile.component';
+import { VoteButtonComponent } from './auth/shared/vote-button/vote-button.component';
+import { SideBarComponent } from './auth/shared/side-bar/side-bar.component';
+import { TopicSideBarComponent } from './auth/shared/topic-side-bar/topic-side-bar.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SignUpComponent,
     LoginComponent,
     HomeComponent,
+    PostTileComponent,
+    VoteButtonComponent,
+    SideBarComponent,
+    TopicSideBarComponent,
   ],
   imports: [
     BrowserModule,
