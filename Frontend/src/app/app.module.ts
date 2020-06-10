@@ -22,6 +22,7 @@ import { TopicSideBarComponent } from './auth/shared/topic-side-bar/topic-side-b
 import { CreateTopicComponent } from './topic/create-topic/create-topic.component';
 import { CreatePostComponent } from './post/create-post/create-post.component';
 import { ListTopicsComponent } from './topic/list-topics/list-topics.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ListTopicsComponent } from './topic/list-topics/list-topics.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     FontAwesomeModule,
+    EditorModule,
   ],
   providers: [
     {
