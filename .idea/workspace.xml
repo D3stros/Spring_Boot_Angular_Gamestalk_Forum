@@ -19,34 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97cf47ff-57f1-4e73-a191-6bf2569d1a14" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/auth.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post-model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post-tile/post-tile.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post-tile/post-tile.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post-tile/post-tile.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post-tile/post-tile.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/side-bar/side-bar.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/side-bar/side-bar.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/side-bar/side-bar.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/side-bar/side-bar.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/topic-side-bar/topic-side-bar.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/topic-side-bar/topic-side-bar.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/topic-side-bar/topic-side-bar.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/topic-side-bar/topic-side-bar.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/vote-button/vote-button.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/vote-button/vote-button.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/vote-button/vote-button.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/vote-button/vote-button.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/post/create-post/create-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/post/create-post/create-post.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/post/view-post/view-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/post/view-post/view-post.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="60615cbf-eedc-48f7-ba4c-8b0fe57adbf6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
