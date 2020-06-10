@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { throwError } from 'rxjs';
 import { CreatePostPayload } from './create-post-payload';
 import { TopicModel } from 'src/app/topic/topic-response';
-import { PostService } from 'src/app/auth/shared/post.service';
 import { TopicService } from 'src/app/topic/topic.service';
+import { PostService } from 'src/app/shared/post.service';
 
 @Component({
   selector: 'app-create-post',

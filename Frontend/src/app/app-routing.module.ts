@@ -8,10 +8,12 @@ import { CreatePostComponent } from './post/create-post/create-post.component';
 import { CreateTopicComponent } from './topic/create-topic/create-topic.component';
 import { ListTopicsComponent } from './topic/list-topics/list-topics.component';
 import { ViewPostComponent } from './post/view-post/view-post.component';
+import { UserProfileComponent } from './auth/user-profile/user-profile.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'view-post/:id', component: ViewPostComponent },
+  { path: 'user-profile/:name', component: UserProfileComponent },
   { path: 'list-topics', component: ListTopicsComponent },
   { path: 'create-post', component: CreatePostComponent },
   { path: 'create-topic', component: CreateTopicComponent },

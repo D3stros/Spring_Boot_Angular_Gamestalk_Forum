@@ -15,16 +15,18 @@ import { ToastrModule } from 'ngx-toastr';
 import { TokenInterceptor } from './token-interceptor';
 import { HomeComponent } from './home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { PostTileComponent } from './auth/shared/post-tile/post-tile.component';
-import { VoteButtonComponent } from './auth/shared/vote-button/vote-button.component';
-import { SideBarComponent } from './auth/shared/side-bar/side-bar.component';
-import { TopicSideBarComponent } from './auth/shared/topic-side-bar/topic-side-bar.component';
+
 import { CreateTopicComponent } from './topic/create-topic/create-topic.component';
 import { CreatePostComponent } from './post/create-post/create-post.component';
 import { ListTopicsComponent } from './topic/list-topics/list-topics.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { ViewPostComponent } from './post/view-post/view-post.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { VoteButtonComponent } from './shared/vote-button/vote-button.component';
+import { SideBarComponent } from './shared/side-bar/side-bar.component';
+import { TopicSideBarComponent } from './shared/topic-side-bar/topic-side-bar.component';
+import { PostTileComponent } from './shared/post-tile/post-tile.component';
+import { UserProfileComponent } from './auth/user-profile/user-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +42,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CreatePostComponent,
     ListTopicsComponent,
     ViewPostComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,

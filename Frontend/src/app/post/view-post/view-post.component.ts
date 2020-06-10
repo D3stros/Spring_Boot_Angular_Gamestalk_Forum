@@ -4,8 +4,8 @@ import { throwError } from 'rxjs';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CommentPayload } from 'src/app/comment/comment.payload';
 import { CommentService } from 'src/app/comment/comment.service';
-import { PostModel } from 'src/app/auth/shared/post-model';
-import { PostService } from 'src/app/auth/shared/post.service';
+import { PostModel } from 'src/app/shared/post-model';
+import { PostService } from 'src/app/shared/post.service';
 
 @Component({
   selector: 'app-view-post',

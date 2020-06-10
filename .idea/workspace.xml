@@ -21,6 +21,31 @@
   <component name="ChangeListManager">
     <list default="true" id="97cf47ff-57f1-4e73-a191-6bf2569d1a14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/auth.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post-model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post-tile/post-tile.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post-tile/post-tile.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post-tile/post-tile.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post-tile/post-tile.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/post.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/side-bar/side-bar.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/side-bar/side-bar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/side-bar/side-bar.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/side-bar/side-bar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/topic-side-bar/topic-side-bar.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/topic-side-bar/topic-side-bar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/topic-side-bar/topic-side-bar.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/topic-side-bar/topic-side-bar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/vote-button/vote-button.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/vote-button/vote-button.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/vote-button/vote-button.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/auth/shared/vote-button/vote-button.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/post/create-post/create-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/post/create-post/create-post.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/post/view-post/view-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/post/view-post/view-post.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,22 +208,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591651464162" />
-    <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1591737947500">
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1591827118972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591737947500" />
-    <state width="1877" height="266" key="GridCell.Tab.0.center" timestamp="1591737947500">
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591827118972" />
+    <state width="1877" height="266" key="GridCell.Tab.0.center" timestamp="1591827118972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591737947500" />
-    <state width="1877" height="266" key="GridCell.Tab.0.left" timestamp="1591737947500">
+    <state width="1877" height="266" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591827118972" />
+    <state width="1877" height="266" key="GridCell.Tab.0.left" timestamp="1591827118972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591737947500" />
-    <state width="1877" height="266" key="GridCell.Tab.0.right" timestamp="1591737947500">
+    <state width="1877" height="266" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591827118972" />
+    <state width="1877" height="266" key="GridCell.Tab.0.right" timestamp="1591827118972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591737947500" />
+    <state width="1877" height="266" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591827118972" />
     <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1591714625298">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
