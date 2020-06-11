@@ -36,13 +36,13 @@ public class PostController {
     }
 
     @GetMapping("by-topic/{id}")
-    public ResponseEntity<List<PostResponse>> getPostsByTopic(Long id) {
+    public ResponseEntity<List<PostResponse>> getPostsByTopic(@PathVariable Long id) {
         return status(HttpStatus.OK).body(postService.getPostsByTopic(id));
     }
 
     @GetMapping("by-user/{name}")
-    public ResponseEntity<List<PostResponse>> getPostsByUsername(String username) {
-        return status(HttpStatus.OK).body(postService.getPostsByUsername(username));
+    public ResponseEntity<List<PostResponse>> getPostsByUsername(@PathVariable String name) {
+        return status(HttpStatus.OK).body(postService.getPostsByUsername(name));
     }
 }
 
