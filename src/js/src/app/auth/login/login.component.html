@@ -1,0 +1,84 @@
+<div class="login-section">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-xs-12">
+      <div class="card">
+        <div>
+          <h2>Test login account for demonstration purposes:</h2>
+          <p>User name: gamestalk</p>
+          <p>Password: 123</p>
+        </div>
+        <div class="card-header" style="text-align: center;">
+          <h4>Login</h4>
+        </div>
+        <div class="card-body text-center">
+          <img
+            class="mb-3"
+            src="../../../assets/img/undraw_Login_v483.svg"
+            alt="triangle with all three sides equal"
+            height="100"
+            width="150"
+          />
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="form-group row">
+              <label
+                for="user_name"
+                class="col-md-4 col-form-label text-md-right"
+                >Username</label
+              >
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  id="user_name"
+                  class="form-control"
+                  [formControlName]="'username'"
+                  name="user_name"
+                  required
+                  autofocus
+                />
+                <span
+                  *ngIf="
+                    !loginForm.get('username').valid &&
+                    loginForm.get('username').touched
+                  "
+                  class="help-block"
+                  >Please provide a valid username</span
+                >
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label text-md-right"
+                >Password</label
+              >
+              <div class="col-md-6">
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control"
+                  [formControlName]="'password'"
+                  name="password"
+                  required
+                />
+                <span
+                  *ngIf="
+                    !loginForm.get('password').valid &&
+                    loginForm.get('password').touched
+                  "
+                  class="help-block"
+                  >Password cannot be empty</span
+                >
+              </div>
+            </div>
+
+            <div>
+              <button type="submit" class="login mt-3 mb-3" style="width: 50%;">
+                Login
+              </button>
+            </div>
+            <span>New to Gamestalk? <a routerLink="/sign-up">Sign up</a> </span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
